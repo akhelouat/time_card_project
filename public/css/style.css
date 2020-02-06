@@ -1,0 +1,74 @@
+html
+{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+    padding: 0px;
+    margin: 0px;
+    background-color: #f1f1f1;
+    height: 100%
+}
+header
+{
+    text-align: center;
+    height: 10%;
+    background-color: brown;
+    color: white;
+}
+main
+{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer
+{
+    height: 15%;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    border: 1px black solid;
+    border-radius: 10%;
+    box-shadow: 2px 2px 2px black;
+    text-align: center;
+    
+}
+form>label>input
+{
+    margin: 20px;
+}
+#check
+{
+    height: 35%;
+    width: 35%;
+    border: 3px solid brown;
+    box-shadow: 3px 3px 3px black;
+    font-size: 1.4em;
+}
+#check>div
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.increase
+{
+    width:30px;
+    height:30px;
+}
