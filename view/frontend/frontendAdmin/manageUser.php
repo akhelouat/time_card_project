@@ -4,8 +4,7 @@ $titlePage = "Manage User";
 
 //Requires & includes
 
-
-include('../../../model/dbconnect.php');
+include('../../model/dbconnect.php');
 require('../menu.php');
 require('../header.php');
 
