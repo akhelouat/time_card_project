@@ -9,17 +9,20 @@
 </head>
 <body>
     <div>
-    <select name='amis'  id='amis' onchange="recupSelected(this.value);">
+    
         <?php
         include '../../../model/dbconnect.php';
-            $res = $db->query("SELECT nom, prenom, user FROM member INNER JOIN member_info ON member.id = member_id ORDER BY id
-            ASC");
-            $res->data_seek(0);
-            while ($row = $res->fetch_assoc()) {
-             ?> <a href='userPage.php?user="<?=$row['user'];?>"'>
-             <?php echo " id = " . $row['id'] . "\n";?></a> <?php
-            }
+            $res = $db->query("SELECT nom FROM promo ORDER BY id DESC");
+            
         ?>
+        <select name='amis'  id='amis' onchange="recupSelected(this.value);">
+            <option value='mizrahi'>$list_ami[0]</option>
+		    <option value='johan'>$list_ami[1]</option>
+		</select>
+
+        <div>
+        <h2> </h2>        
+        </div>
     </div>
     <script type="text/javascript" src="../../../public/js/manageUser.js"></script>
 </body>
