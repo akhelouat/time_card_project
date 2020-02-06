@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=abdel', 'root','');
+/* $bdd = new PDO('mysql:host=localhost;dbname=abdel', 'root','');
 $error = 1;
 $response = $bdd->query('SELECT pseudo, password FROM membre ');
 session_start();
@@ -48,34 +48,29 @@ if ( $error == 1 )
 {
  header('Location: welcome.php?error=1');
  exit;
-}
+}*/
 
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<link rel="stylesheet" href="components/style.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta charset="UTF-8">
-    <title>Présence</title>
-</head>
-<body>
-<?php include('components/header.php'); ?>    
-<main>
-     <div id="check">
-         <div id="nom"> <!-- affiche le pseudo -->
-         <p>Bienvenu <?php echo $_SESSION['pseudo'] ?></p>
-         </div>
-         <div id="actualDate"> <!-- affiche la date du jour et l'heure -->
-         <p>On est le <?php echo date('Y-m-d H:i'); ?></p>
-         </div>
-         <div id="signature"> <!-- cases à cocher -->
-         <input class="increase" type="checkbox">
-         <input class="increase" type="checkbox"> 
-         <input class="increase" type="checkbox">  
-         </div>
-     </div>
-</main>
-<?php include('components/footer.php'); ?>    
-</body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>OHA Presence</title>
+  </head>
+  <body>
+    <h1>Hello, user!</h1>
+
+<div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+  <label class="custom-control-label" for="defaultChecked2">I'am in OHA</label>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
