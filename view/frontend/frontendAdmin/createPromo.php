@@ -16,11 +16,12 @@
         </form>
         <h2>promo list:</h2>
         <?php
-            $res = $db->query("SELECT id FROM test ORDER BY id
-            ASC");
+        include '../../../model/dbconnect.php';
+            $res = $db->query("SELECT nom, prenom, user FROM member INNER JOIN member_info ON member.id = member_id ORDER BY id ASC");
             $res->data_seek(0);
             while ($row = $res->fetch_assoc()) {
-             echo " id = " . $row['id'] . "\n";
+             ?> <a href='userPage.php?user="<?=$row['user'];?>"'>
+             <?php echo " id = " . $row['id'] . "\n";?></a> <?php
             }
         ?>
     </div>
