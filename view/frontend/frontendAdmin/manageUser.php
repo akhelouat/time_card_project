@@ -2,14 +2,27 @@
 // Title
 $titlePage = "Manage User";
 
-//Requires
+//Requires & includes
 
+
+include('../../../model/dbconnect.php');
 require('../menu.php');
 require('../header.php');
-?>
 
-<div class="container">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum necessitatibus amet vitae veritatis ea assumenda voluptate placeat nostrum quod asperiores. Accusantium voluptate beatae dignissimos culpa ex blanditiis exercitationem mollitia neque ipsum voluptatum fugiat delectus ipsam alias, natus nihil ipsa iure laudantium. Dicta libero sint eveniet deleniti fugiat perferendis tempore dolorem qui pariatur reiciendis. Ut voluptatum sed, quasi perspiciatis eius dolor facilis expedita cumque nesciunt eveniet mollitia porro suscipit alias sint iure. At iusto saepe laudantium? Vero earum suscipit provident accusamus dicta ducimus? Labore distinctio eius placeat recusandae ratione rem, ea rerum ut cupiditate numquam et cumque tempora sequi ad esse magnam nemo, expedita temporibus. Officiis, error? Est, sequi maiores recusandae inventore totam quo mollitia assumenda ratione quos vero architecto saepe laborum. A neque voluptatibus corrupti in iure nisi autem. Perspiciatis beatae perferendis deleniti necessitatibus velit repudiandae assumenda delectus earum repellendus ut libero fugit, vitae quidem voluptate, harum quaerat soluta labore eligendi! Temporibus provident maiores delectus!</p>
+//db queries
+$res = $db->query("SELECT nom FROM promo ORDER BY id DESC");
+?>
+<div>
+
+<select name='amis'  id='amis' onchange="recupSelected(this.value);">
+    <option value='mizrahi'>$list_ami[0]</option>
+    <option value='johan'>$list_ami[1]</option>
+</select>
+
+<div>
+<h2> </h2>        
 </div>
+</div>
+<script type="text/javascript" src="../../../public/js/manageUser.js"></script>
 
 <?php require('../footer.php')?>

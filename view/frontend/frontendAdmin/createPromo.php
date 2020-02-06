@@ -4,7 +4,7 @@ $titlePage = "New User";
 
 //Requires
 
-require('../menu.php');
+include('../menu.php');
 require('../header.php');
 ?>
 <div>
