@@ -1,9 +1,10 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=timecard, , ,');
-if ($db->connect_errno) {
-    $errno=$db;
-    $error=$db->connect_error;
-    echo "Fail when connecting to MariaDB : (" . $errno . ")
-   " . $error;
+try {
+    $db = new PDO('mysql:host=localhost;dbname=timecard,root');
+
+    $db = null;
+   } catch (PDOException $e) {
+    print "Error !: " . $e->getMessage() . "<br/>";
+    die();
    }
 ?>
