@@ -6,6 +6,14 @@ $titlePage = "New User";
 
 include('../menu.php');
 require('../header.php');
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=timecard', 'root','');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
 ?>
 <div>
     <form action="POST" action="checkPromo.php">
@@ -17,8 +25,8 @@ require('../header.php');
     <?php
         $res = $db->query("SELECT nom, prenom, user FROM member INNER JOIN member_info ON member.id = member_id ORDER BY id
         ASC");
-        $res->data_seek(0);
-        while ($row = $res->fetch_assoc()) {
+        while ($row = $res->fetch()) 
+        {
             ?> <a href='userPage.php?user="<?=$row['user'];?>"'>
             <?php echo " id = " . $row['id'] . "\n";?></a> <?php
         }
