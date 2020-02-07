@@ -14,7 +14,7 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-?>
+require('../footer.php')?>
 <div>
     <form action="POST" action="checkPromo.php">
         <label for="promo"> promo:</label>
@@ -23,12 +23,10 @@ catch(Exception $e)
     </form>
     <h2>promo list:</h2>
     <?php
-        $res = $db->query("SELECT nom, prenom, user FROM member INNER JOIN member_info ON member.id = member_id ORDER BY id
-        ASC");
-        while ($row = $res->fetch()) 
+     $res = $bdd->query('SELECT * FROM promo ');
+       while ($row = $res->fetch()) 
         {
-            ?> <a href='userPage.php?user="<?=$row['user'];?>"'>
-            <?php echo " id = " . $row['id'] . "\n";?></a> <?php
+            echo '<p><a href="#">' . $row['name'] . '</a></p>';
         }
     ?>
 </div>
