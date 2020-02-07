@@ -1,5 +1,5 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=abdel, , ,');
+$db = new PDO('mysql:host=localhost;dbname=timecard, , ,');
 if ($db->connect_errno) {
     $errno=$db;
     $error=$db->connect_error;
