@@ -3,7 +3,7 @@
 $titlePage = "New User";
 
 //Requires
-
+include('../../model/dbconnect.php');
 include('../menu.php');
 require('../header.php');
 try
@@ -26,7 +26,7 @@ require('../footer.php')?>
      $res = $bdd->query('SELECT * FROM promo ');
        while ($row = $res->fetch()) 
         {
-            echo '<p><a href="#">' . $row['name'] . '</a></p>';
+            echo '<p><a href="manageuser.php?promo='.$row['promo_id'].'">' . $row['name'] . '</a></p>';
         }
     ?>
 </div>
