@@ -26,7 +26,7 @@ require('../footer.php')?>
      $res = $bdd->query('SELECT * FROM promo ');
        while ($row = $res->fetch()) 
         {
-            echo '<p><a href="manageuser.php?promo='.$row['promo_id'].'">' . $row['name'] . '</a></p>';
+            echo '<p><a href="manageUser.php?promo='.$row['promo_id'].'">' . $row['name'] . '</a></p>';
         }
     ?>
 </div>
