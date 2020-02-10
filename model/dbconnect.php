@@ -1,10 +1,12 @@
 <?php
-try {
-    $db = new PDO('mysql:host=localhost;dbname=timecard,root');
+try
+{
+    $db = new PDO('mysql:host=localhost;dbname=timecard','root', '');
 
-    $db = null;
-   } catch (PDOException $e) {
-    print "Error !: " . $e->getMessage() . "<br/>";
+}
+catch (PDOException $e)
+{
+    print "Error : " . $e->getMessage() . "<br/>";
     die();
-   }
+}
 ?>
